@@ -59,7 +59,10 @@ public class Main {
                     catch (IOException e) { System.out.println("Greška: " + e.getMessage()); }
                     break;
                 case "4": // učitavamo podatke iz datoteke
-                    try { ev.ucitajPodatkeIzDatoteke("vozila.txt"); }
+                    try {
+                        ev.ucitajPodatkeIzDatoteke("vozila.txt"); // učitava podatke iz datoteke
+                        ev.prikazSvihVozila(); // dodala sam metodu koja ispisuje sva vozila u konzolu nakon učitavanja podataka iz datoteke
+                    }
                     catch (Exception e) { System.out.println("Greška: " + e.getMessage()); }
                     break;
             }

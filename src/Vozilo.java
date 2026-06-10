@@ -40,7 +40,7 @@ public class Vozilo {
         this.godinaProizvodnje = godinaProizvodnje;
     }
 
-    // metoda za učitavanje podataka - postavlja i dohvaća podatke o vozilu
+    // metoda za učitavanje podataka - postavlja i dohvaća podatke o vozilu - ne koristim ju dalje u zadatku,ali je pisalo da ju napravimo pa jesam
     public void ucitajPodatke(String registarskiBroj, String marka, int godinaProizvodnje) {
         this.registarskiBroj = registarskiBroj;
         this.marka = marka;

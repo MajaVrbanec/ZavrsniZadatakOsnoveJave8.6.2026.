@@ -36,6 +36,7 @@ public class EvidencijaVozila {
 
     // metoda koja učitava podatke o vozilima iz tekstualne datoteke
     public void ucitajPodatkeIzDatoteke(String datoteka) throws IOException {
+        listaVozila.clear(); // da obriše staru listu ako postoji prije nego doda nove podatke koje smo unijeli kroz konzolu, spremili ih u listu i datoteku pa ih učita iz datoteke (te nove podatke)
 
         // BufferedReader reader je alat za čitanje tekstualnih podataka (bajtova) iz datoteke i slaže ih u tekstualne linije (Stringove)
         // new FileReader(datoteka) je alat(klasa) koji tu datoteku otvara kao tok bajtova kako bi se mogla pročitati
@@ -75,6 +76,12 @@ public class EvidencijaVozila {
 
         }
 
+    }
+    // metoda za prikaz svih objekata - vozila spremljenih u listu i u datoteku kako bismo mogli pozvati ovu metodu kod učitavanja da se ona ispišu i u konzolu
+    public void prikazSvihVozila() {
+        for (Vozilo v : listaVozila) {
+            v.prikaziPodatke();
+        }
     }
 
 }
